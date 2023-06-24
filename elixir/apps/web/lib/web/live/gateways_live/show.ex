@@ -6,16 +6,19 @@ defmodule Web.GatewaysLive.Show do
     <.section_header>
       <:breadcrumbs>
         <.breadcrumbs entries={[
-          %{label: "Home", path: ~p"/"},
-          %{label: "Gateways", path: ~p"/gateways"},
-          %{label: "gcp-primary", path: ~p"/gateways/DF43E951-7DFB-4921-8F7F-BF0F8D31FA89"}
+          %{label: "Home", path: ~p"/#{@account}/dashboard"},
+          %{label: "Gateways", path: ~p"/#{@account}/gateways"},
+          %{
+            label: "gcp-primary",
+            path: ~p"/#{@account}/gateways/DF43E951-7DFB-4921-8F7F-BF0F8D31FA89"
+          }
         ]} />
       </:breadcrumbs>
       <:title>
         Viewing Gateway <code>gcp-primary</code>
       </:title>
       <:actions>
-        <.edit_button navigate={~p"/gateways/DF43E951-7DFB-4921-8F7F-BF0F8D31FA89/edit"}>
+        <.edit_button navigate={~p"/#{@account}/gateways/DF43E951-7DFB-4921-8F7F-BF0F8D31FA89/edit"}>
           Edit Gateway
         </.edit_button>
       </:actions>
@@ -175,7 +178,7 @@ defmodule Web.GatewaysLive.Show do
               class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
             >
               <.link
-                navigate={~p"/resources/DF43E951-7DFB-4921-8F7F-BF0F8D31FA89"}
+                navigate={~p"/#{@account}/resources/DF43E951-7DFB-4921-8F7F-BF0F8D31FA89"}
                 class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
               >
                 Engineering GitLab
@@ -191,7 +194,7 @@ defmodule Web.GatewaysLive.Show do
               class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
             >
               <.link
-                navigate={~p"/resources/DF43E951-7DFB-4921-8F7F-BF0F8D31FA89"}
+                navigate={~p"/#{@account}/resources/DF43E951-7DFB-4921-8F7F-BF0F8D31FA89"}
                 class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
               >
                 SJC VPC-1

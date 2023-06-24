@@ -6,9 +6,9 @@ defmodule Web.ResourcesLive.New do
     <.section_header>
       <:breadcrumbs>
         <.breadcrumbs entries={[
-          %{label: "Home", path: ~p"/"},
-          %{label: "Resources", path: ~p"/resources"},
-          %{label: "Add resource", path: ~p"/resources/new"}
+          %{label: "Home", path: ~p"/#{@account}/dashboard"},
+          %{label: "Resources", path: ~p"/#{@account}/resources"},
+          %{label: "Add resource", path: ~p"/#{@account}/resources/new"}
         ]} />
       </:breadcrumbs>
       <:title>

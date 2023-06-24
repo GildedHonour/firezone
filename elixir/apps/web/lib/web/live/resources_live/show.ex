@@ -6,16 +6,19 @@ defmodule Web.ResourcesLive.Show do
     <.section_header>
       <:breadcrumbs>
         <.breadcrumbs entries={[
-          %{label: "Home", path: ~p"/"},
-          %{label: "Resources", path: ~p"/resources"},
-          %{label: "Engineering Jira", path: ~p"/resources/DF43E951-7DFB-4921-8F7F-BF0F8D31FA89"}
+          %{label: "Home", path: ~p"/#{@account}/dashboard"},
+          %{label: "Resources", path: ~p"/#{@account}/resources"},
+          %{
+            label: "Engineering Jira",
+            path: ~p"/#{@account}/resources/DF43E951-7DFB-4921-8F7F-BF0F8D31FA89"
+          }
         ]} />
       </:breadcrumbs>
       <:title>
         Viewing Resource <code>Engineering Jira</code>
       </:title>
       <:actions>
-        <.edit_button navigate={~p"/resources/DF43E951-7DFB-4921-8F7F-BF0F8D31FA89/edit"}>
+        <.edit_button navigate={~p"/#{@account}/resources/DF43E951-7DFB-4921-8F7F-BF0F8D31FA89/edit"}>
           Edit Resource
         </.edit_button>
       </:actions>
@@ -68,7 +71,7 @@ defmodule Web.ResourcesLive.Show do
               4/15/22 12:32 PM by
               <.link
                 class="text-blue-600 hover:underline"
-                navigate={~p"/users/DF43E951-7DFB-4921-8F7F-BF0F8D31FA89"}
+                navigate={~p"/#{@account}/users/DF43E951-7DFB-4921-8F7F-BF0F8D31FA89"}
               >
                 Andrew Dryga
               </.link>
@@ -107,7 +110,7 @@ defmodule Web.ResourcesLive.Show do
               class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
             >
               <.link
-                navigate={~p"/gateways/DF43E951-7DFB-4921-8F7F-BF0F8D31FA89"}
+                navigate={~p"/#{@account}/gateways/DF43E951-7DFB-4921-8F7F-BF0F8D31FA89"}
                 class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
               >
                 aws-primary
@@ -128,7 +131,7 @@ defmodule Web.ResourcesLive.Show do
               class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
             >
               <.link
-                navigate={~p"/gateways/DF43E951-7DFB-4921-8F7F-BF0F8D31FA89"}
+                navigate={~p"/#{@account}/gateways/DF43E951-7DFB-4921-8F7F-BF0F8D31FA89"}
                 class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
               >
                 aws-secondary
@@ -149,7 +152,7 @@ defmodule Web.ResourcesLive.Show do
               class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
             >
               <.link
-                navigate={~p"/gateways/DF43E951-7DFB-4921-8F7F-BF0F8D31FA89"}
+                navigate={~p"/#{@account}/gateways/DF43E951-7DFB-4921-8F7F-BF0F8D31FA89"}
                 class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
               >
                 gcp-primary
@@ -170,7 +173,7 @@ defmodule Web.ResourcesLive.Show do
               class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
             >
               <.link
-                navigate={~p"/gateways/DF43E951-7DFB-4921-8F7F-BF0F8D31FA89"}
+                navigate={~p"/#{@account}/gateways/DF43E951-7DFB-4921-8F7F-BF0F8D31FA89"}
                 class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
               >
                 gcp-secondary
