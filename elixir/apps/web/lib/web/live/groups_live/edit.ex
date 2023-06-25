@@ -6,10 +6,16 @@ defmodule Web.GroupsLive.Edit do
     <.section_header>
       <:breadcrumbs>
         <.breadcrumbs entries={[
-          %{label: "Home", path: ~p"/#{@account}/dashboard"},
-          %{label: "Groups", path: ~p"/#{@account}/groups"},
-          %{label: "Engineering", path: ~p"/#{@account}/groups/DF43E951-7DFB-4921-8F7F-BF0F8D31FA89"},
-          %{label: "Edit", path: ~p"/#{@account}/groups/DF43E951-7DFB-4921-8F7F-BF0F8D31FA89/edit"}
+          %{label: "Home", path: ~p"/#{@subject.account}/dashboard"},
+          %{label: "Groups", path: ~p"/#{@subject.account}/groups"},
+          %{
+            label: "Engineering",
+            path: ~p"/#{@subject.account}/groups/DF43E951-7DFB-4921-8F7F-BF0F8D31FA89"
+          },
+          %{
+            label: "Edit",
+            path: ~p"/#{@subject.account}/groups/DF43E951-7DFB-4921-8F7F-BF0F8D31FA89/edit"
+          }
         ]} />
       </:breadcrumbs>
       <:title>

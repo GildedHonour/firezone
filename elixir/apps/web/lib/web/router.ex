@@ -37,6 +37,11 @@ defmodule Web.Router do
     pipe_through :public
 
     get "/healthz", HealthController, :healthz
+
+    live_session :unauthenticated_landing,
+      on_mount: [Web.Sandbox] do
+      live "/", LandingLive
+    end
   end
 
   if Mix.env() in [:dev, :test] do
@@ -80,7 +85,7 @@ defmodule Web.Router do
 
     get "/sign_out", AuthController, :sign_out
 
-    live_session :landing,
+    live_session :authenticated_landing,
       on_mount: [Web.Sandbox] do
       live "/", LandingLive
     end

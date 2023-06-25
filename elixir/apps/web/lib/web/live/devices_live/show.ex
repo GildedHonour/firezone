@@ -6,11 +6,11 @@ defmodule Web.DevicesLive.Show do
     <.section_header>
       <:breadcrumbs>
         <.breadcrumbs entries={[
-          %{label: "Home", path: ~p"/#{@account}/dashboard"},
-          %{label: "Devices", path: ~p"/#{@account}/devices"},
+          %{label: "Home", path: ~p"/#{@subject.account}/dashboard"},
+          %{label: "Devices", path: ~p"/#{@subject.account}/devices"},
           %{
             label: "Jamil's Macbook Pro",
-            path: ~p"/#{@account}/devices/DF43E951-7DFB-4921-8F7F-BF0F8D31FA89"
+            path: ~p"/#{@subject.account}/devices/DF43E951-7DFB-4921-8F7F-BF0F8D31FA89"
           }
         ]} />
       </:breadcrumbs>
@@ -42,7 +42,7 @@ defmodule Web.DevicesLive.Show do
             </th>
             <td class="px-6 py-4">
               <.link
-                navigate={~p"/#{@account}/users/55DDA8CB-69A7-48FC-9048-639021C205A2"}
+                navigate={~p"/#{@subject.account}/users/55DDA8CB-69A7-48FC-9048-639021C205A2"}
                 class="text-blue-600 hover:underline"
               >
                 Andrew Dryga

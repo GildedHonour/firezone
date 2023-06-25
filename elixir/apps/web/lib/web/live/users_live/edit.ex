@@ -6,13 +6,16 @@ defmodule Web.UsersLive.Edit do
     <.section_header>
       <:breadcrumbs>
         <.breadcrumbs entries={[
-          %{label: "Home", path: ~p"/#{@account}/dashboard"},
-          %{label: "Users", path: ~p"/#{@account}/users"},
+          %{label: "Home", path: ~p"/#{@subject.account}/dashboard"},
+          %{label: "Users", path: ~p"/#{@subject.account}/users"},
           %{
             label: "Bou Kheir, Jamil",
-            path: ~p"/#{@account}/users/DF43E951-7DFB-4921-8F7F-BF0F8D31FA89"
+            path: ~p"/#{@subject.account}/users/DF43E951-7DFB-4921-8F7F-BF0F8D31FA89"
           },
-          %{label: "Edit", path: ~p"/#{@account}/users/DF43E951-7DFB-4921-8F7F-BF0F8D31FA89/edit"}
+          %{
+            label: "Edit",
+            path: ~p"/#{@subject.account}/users/DF43E951-7DFB-4921-8F7F-BF0F8D31FA89/edit"
+          }
         ]} />
       </:breadcrumbs>
       <:title>

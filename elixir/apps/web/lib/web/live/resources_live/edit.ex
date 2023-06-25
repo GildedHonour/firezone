@@ -6,10 +6,16 @@ defmodule Web.ResourcesLive.Edit do
     <.section_header>
       <:breadcrumbs>
         <.breadcrumbs entries={[
-          %{label: "Home", path: ~p"/#{@account}/dashboard"},
-          %{label: "Resources", path: ~p"/#{@account}/resources"},
-          %{label: "GitLab", path: ~p"/#{@account}/resources/DF43E951-7DFB-4921-8F7F-BF0F8D31FA89"},
-          %{label: "Edit", path: ~p"/#{@account}/resources/DF43E951-7DFB-4921-8F7F-BF0F8D31FA89/edit"}
+          %{label: "Home", path: ~p"/#{@subject.account}/dashboard"},
+          %{label: "Resources", path: ~p"/#{@subject.account}/resources"},
+          %{
+            label: "GitLab",
+            path: ~p"/#{@subject.account}/resources/DF43E951-7DFB-4921-8F7F-BF0F8D31FA89"
+          },
+          %{
+            label: "Edit",
+            path: ~p"/#{@subject.account}/resources/DF43E951-7DFB-4921-8F7F-BF0F8D31FA89/edit"
+          }
         ]} />
       </:breadcrumbs>
       <:title>

@@ -6,9 +6,9 @@ defmodule Web.UsersLive.New do
     <.section_header>
       <:breadcrumbs>
         <.breadcrumbs entries={[
-          %{label: "Home", path: ~p"/#{@account}/dashboard"},
-          %{label: "Users", path: ~p"/#{@account}/users"},
-          %{label: "Add user", path: ~p"/#{@account}/users/new"}
+          %{label: "Home", path: ~p"/#{@subject.account}/dashboard"},
+          %{label: "Users", path: ~p"/#{@subject.account}/users"},
+          %{label: "Add user", path: ~p"/#{@subject.account}/users/new"}
         ]} />
       </:breadcrumbs>
       <:title>
