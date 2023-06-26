@@ -38,17 +38,6 @@ defmodule Web.PoliciesLive.Index do
             </div>
           </form>
         </div>
-        <.button_group>
-          <:first>
-            All
-          </:first>
-          <:middle>
-            Online
-          </:middle>
-          <:last>
-            Deleted
-          </:last>
-        </.button_group>
       </div>
       <div class="overflow-x-auto">
         <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
