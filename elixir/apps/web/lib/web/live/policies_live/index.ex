@@ -181,42 +181,6 @@ defmodule Web.PoliciesLive.Index do
                 </.link>
               </td>
             </tr>
-            <tr class="border-b dark:border-gray-700">
-              <th
-                scope="row"
-                class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white"
-              >
-                <.link
-                  navigate={~p"/#{@subject.account}/policies/DF43E951-7DFB-4921-8F7F-BF0F8D31FA89"}
-                  class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-                >
-                  Admin access to Jira
-                </.link>
-              </th>
-              <td class="px-4 py-3">
-                <.link
-                  class="inline-block"
-                  navigate={~p"/#{@subject.account}/groups/DF43E951-7DFB-4921-8F7F-BF0F8D31FA89"}
-                >
-                  <span class="bg-gray-100 text-gray-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-gray-900 dark:text-gray-300">
-                    Admin
-                  </span>
-                </.link>
-              </td>
-              <td class="px-4 py-3">
-                <.link
-                  class="text-blue-600 dark:text-blue-500 hover:underline"
-                  navigate={~p"/#{@subject.account}/resources/DF43E951-7DFB-4921-8F7F-BF0F8D31FA89"}
-                >
-                  Jira
-                </.link>
-              </td>
-              <td class="px-4 py-3 flex items-center justify-end">
-                <.link navigate="#" class="text-blue-600 dark:text-blue-500 hover:underline">
-                  Delete
-                </.link>
-              </td>
-            </tr>
           </tbody>
         </table>
       </div>
